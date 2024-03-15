@@ -1,29 +1,25 @@
 <?php require "components/head.php" ?>
+<?php require "components/navbar.php" ?>
 
-    <?php require "components/navbar.php" ?>
+<h1>Library</h1>
 
-    <h1>Library</h1>
-
-    <form>
+<form>
     <input name='id'/>
     <button>Filter by ID</button>
     </form>
 
-
-
-    <?php foreach($posts as $post){ ?>
-
-        <?php if($post["availability"] == 1){
-            $post["availability"]="Piejams";
-            
-        }else{
-            $post["availability"]="Nav Piejams";
-        } ?>
-        
-
-       <li> <?= $post["title"]." / ".$post["author"]." / ".$post["publication_year"]." / ".$post["availability"]
-        ?> </li><br>
-    <?php } ?>
-    </ol>
+<ul>
+    <?php foreach($posts as $post): 
+          $availability = ($post["availability"] == 1) ? "Piejams" : "Nav piejams"; ?>
+        <li><?= $post["title"] ?> / <?= $post["author"] ?> / <?= $post["publication_year"] ?> / <?= $availability ?></br>
+            <?php if ($post["availability"] == 1): ?>
+                <form method="post">
+                    <input type="hidden" name="book_id" value="<?= $post["book_id"] ?>">
+                    <button type="submit">Aizņemties</button>
+                </form>
+            <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
 
 <?php require "components/footer.php" ?>

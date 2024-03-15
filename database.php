@@ -20,4 +20,17 @@ private $connection;
 
         return $query->fetchAll();
     }
+
+
+public function registerUser($username, $email, $password) {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $query = "INSERT INTO users (username, email, password_hash) VALUES (:username, :email, :password)";
+        $params = array(
+            ':username' => $username,
+            ':email' => $email,
+            ':password' => $hashed_password
+        );
+        $this->execute($query, $params);
+}
+
 }
