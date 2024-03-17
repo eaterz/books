@@ -7,3 +7,4 @@ return  [
         "dbname" => "book_list",
         "charset" => "utf8mb4"
         ];
+

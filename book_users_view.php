@@ -1,5 +1,5 @@
-<?php require "components/head.php" ?>
-<?php require "components/navbar.php" ?>
+<?php require "head.php" ?>
+<a href="home.php">home</a>
 
 <h1>Library</h1>
 
@@ -22,4 +22,4 @@
     <?php endforeach; ?>
 </ul>
 
-<?php require "components/footer.php" ?>
+<?php require "footer.php" ?>
