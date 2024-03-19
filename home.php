@@ -16,7 +16,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])) {
             <?php if($_SESSION['username'] == "Admin"){ ?>
                 <a href="book.edit.php">edit books</a>
             <?php }else{ ?>
-                <a href="book_users.php">books</a>
+                <?php require "components/navbar.users.php";?>
             <?php } ?>
 
         <h1>Hello, <?php echo $_SESSION['username']; ?></h1>

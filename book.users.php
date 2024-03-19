@@ -22,4 +22,4 @@ if(isset($_GET["id"]) && $_GET["id"] != "" ){
 
 $posts = $db->execute($query_string, $params);
 
-require "book_users_view.php";
+require "book.users.view.php";

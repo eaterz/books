@@ -4,7 +4,7 @@
     <title>Pieteikšanās</title>
 </head>
 <body>
-    <?php require "navbar.php"; ?>
+    <?php require "components/navbar.php"; ?>
     <form action="login.php" method="post">
         <h2>LOGIN</h2>
         <?php if(isset($_GET['log'])) { ?>

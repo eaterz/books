@@ -1,6 +1,5 @@
-<?php require "head.php" ?>
-<a href="home.php">home</a>
-
+<?php require "components/head.php";
+    require "components/navbar.users.php" ?>
 <h1>Library</h1>
 
 <form>
@@ -13,7 +12,7 @@
           $availability = ($post["availability"] == 1) ? "Piejams" : "Nav piejams"; ?>
         <li><?= $post["title"] ?> / <?= $post["author"] ?> / <?= $post["publication_year"] ?> / <?= $availability ?></br>
             <?php if ($post["availability"] == 1): ?>
-                <form method="post">
+                <form action="checkout.php" method="post">
                     <input type="hidden" name="book_id" value="<?= $post["book_id"] ?>">
                     <button type="submit">Aizņemties</button>
                 </form>
@@ -22,4 +21,4 @@
     <?php endforeach; ?>
 </ul>
 
-<?php require "footer.php" ?>
+<?php require "components/footer.php" ?>
