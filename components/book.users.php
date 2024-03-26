@@ -1,10 +1,11 @@
 <?php
+$page_title = "Users book";
 require "function.php";
 $config = require "config.php";
 require "database.php";
 
 
-$page_title = "Posts";
+
 
 
 $db = new Database($config);
@@ -22,4 +23,4 @@ if(isset($_GET["id"]) && $_GET["id"] != "" ){
 
 $posts = $db->execute($query_string, $params);
 
-require "book.users.view.php";
+require "views/book.users.view.php";

@@ -1,4 +1,5 @@
 <?php
+$page_title = "Delete";
 // Perform database operations to delete the book with the given ID
 // Establish database connection
 require_once "Database.php"; // Adjust path as needed
@@ -11,7 +12,7 @@ if (isset($_POST['book_id'])) {
     $database->execute("DELETE FROM books WHERE book_id = :book_id", [":book_id" => $_POST["book_id"]]);
 
     // Redirect back to the book list page after successful deletion
-    header("Location: book.edit.php");
+    header("Location: /admin");
     exit();
 }
 ?>

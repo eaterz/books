@@ -1,5 +1,5 @@
 <?php
-
+$page_title = "Edit";
 $config = require "config.php";
 require "database.php";
 $db = new Database($config);
@@ -7,7 +7,7 @@ $db = new Database($config);
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         $post = $db->execute("SELECT * FROM books WHERE book_id = :book_id", [":book_id" => $_GET['book_id']])[0];
-        require 'edit.view.php';
+        require_once 'views/edit.view.php';
         break;
     case 'POST':
         session_start();
@@ -21,9 +21,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 
             ]);
         
-        header("Location: /books");
+        header("Location: /admin");
         break;
     default:
-        header("Location: /books");
+        header("Location: /admin");
         break;
 }

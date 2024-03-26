@@ -16,13 +16,13 @@ require "components/head.php";
           $availability = ($post["availability"] == 1) ? "Piejams" : "Nav piejams"; ?>
         <li><?= $post["title"] ?> / <?= $post["author"] ?> / <?= $post["publication_year"] ?> / <?= $availability ?><br>
            
-                <form method="GET" action="edit.php">
+                <form method="GET" action="/books/edit">
                         <input id="book_id" name="book_id" type="hidden" value=<?=$post['book_id']?> />
                         <button class="blu">Edit</button>
                     </form>
 
             
-            <form action="delete.php" method="post">
+            <form action="/books/delete" method="post">
                 <input type="hidden" name="book_id" value="<?= $post["book_id"] ?>">
                 <button type="submit">Delete</button>
             </form>
@@ -31,6 +31,9 @@ require "components/head.php";
     
 </ul>
 
+<form action="/create" method="GET">
+<button type="submit">Pievienot Grāmatu</button>
+</form>
 <?php 
 
 

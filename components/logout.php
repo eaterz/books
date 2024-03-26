@@ -1,6 +1,7 @@
 <?php
+$page_title = "Logout";
 session_start();
 session_unset();
 session_destroy();
 
-header("Location: index.view.php");
+header("Location: /");

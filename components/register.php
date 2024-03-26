@@ -1,7 +1,8 @@
 <?php
+$page_title = "Register";
 session_start();
-$config = require "config.php";
-require "database.php";
+$config = require_once "config.php";
+require_once "database.php";
 $db = new Database($config);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate input
     if (empty($username) || empty($password) || empty($confirm_password)) {
-        header("Location: index.view.php?reg=All fields are required");
+        header("Location: /?reg=All fields are required");
         exit();
     } elseif ($password !== $confirm_password) {
-        header("Location: index.view.php?reg=Passwords do not match");
+        header("Location: /?reg=Passwords do not match");
         exit();
     }
 
@@ -22,13 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
     $params = array($username, $password);
     $result2 = $db->execute($sql, $params);
-
+    
     
     if ($result2 === 1) {
-        header("Location: index.view.php?success=Registration successful. Please login.");
+        header("Location: /?success=Registration successful. Please login.");
         exit();
     } else {
-        header("Location: index.view.php");
+        header("Location: /");
         exit();
     }
 }

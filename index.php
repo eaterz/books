@@ -1,3 +1,3 @@
 <?php
 
-require "controll/router.php";
+require "router.php";

@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 
 if(isset($_SESSION['id']) && isset($_SESSION['username'])) {
@@ -14,20 +15,20 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])) {
     </head>
     <body>
             <?php if($_SESSION['username'] == "Admin"){ ?>
-                <a href="book.edit.php">edit books</a>
+                <a href="/admin">edit books</a>
             <?php }else{ ?>
                 <?php require "components/navbar.users.php";?>
             <?php } ?>
 
         <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
         
-        <a href="logout.php">Logout</a>
+        <a href="/logout">Logout</a>
     </body>
     </html>
 
     <?php
 }else{
-    header("Location: index.view.php");
+    header("Location: views/index.view.php");
     exit();
 }
 ?>

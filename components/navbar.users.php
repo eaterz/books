@@ -1,7 +1,7 @@
 <nav>
 <div >
-    <a href="home.php">home</a>
-    <a href="book.users.php">books</a>
-    <a href="mybooks.users.php">mybooks</a>
+    <a href="/home">home</a>
+    <a href="/books/users">books</a>
+    <a href="/mybooks">mybooks</a>
 </div>
 </nav>

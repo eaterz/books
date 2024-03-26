@@ -1,5 +1,5 @@
 <?php
-
+$page_title = "Login";
 
 session_start();
 $config = require "config.php";
@@ -21,10 +21,10 @@ $username = validate($_POST['username']);
 $pass = validate($_POST['password']);
 
 if(empty($username)) {
-    header("Location: index.view.php?log=User Name is required");
+    header("Location: views/index.view.php?log=User Name is required");
     exit();
 } elseif(empty($pass)) {
-    header("Location: index.view.php?log=Password is required");
+    header("Location: views/index.view.php?log=Password is required");
     exit();
 }
 
@@ -44,17 +44,17 @@ if ($result !== false) { // Check if query execution was successful
             header("Location: home.php");
             exit();
         } else {
-            header("Location: index.view.php");
+            header("Location: views/index.view.php");
             exit();
         }
     } else {
         // Handle case when username/password combination doesn't match
-        header("Location: index.view.php?log=Invalid username or password");
+        header("Location: views/index.view.php?log=Invalid username or password");
         exit();
     }
 } else {
     // Handle case when query execution fails
-    header("Location: index.view.php?log=Database log");
+    header("Location: views/index.view.php?log=Database log");
     exit();
 }
 

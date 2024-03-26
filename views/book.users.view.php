@@ -12,7 +12,7 @@
           $availability = ($post["availability"] == 1) ? "Piejams" : "Nav piejams"; ?>
         <li><?= $post["title"] ?> / <?= $post["author"] ?> / <?= $post["publication_year"] ?> / <?= $availability ?></br>
             <?php if ($post["availability"] == 1): ?>
-                <form action="checkout.php" method="post">
+                <form action="/checkout" method="post">
                     <input type="hidden" name="book_id" value="<?= $post["book_id"] ?>">
                     <button type="submit">Aizņemties</button>
                 </form>

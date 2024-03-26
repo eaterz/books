@@ -1,4 +1,5 @@
 <?php
+$page_title = "Mybooks";
 session_start();
 require "components/head.php";
 require "components/navbar.users.php";
@@ -29,6 +30,9 @@ $borrowed_books = $database->execute($query, $params);
             <?= $book["title"] ?> / <?= $book["author"] ?> / <?= $book["publication_year"] ?>
             / Borrowed Date: <?= $book["borrow_date"] ?> / Return Date: <?= $book["return_date"] ?>
         </li>
+        <form action="/return" method="post">
+<button type="submit">Return</button>
+</form>
     <?php endforeach; ?>
 </ul>
 
