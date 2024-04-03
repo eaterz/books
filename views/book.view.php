@@ -11,7 +11,7 @@
 <ul>
     <?php foreach($posts as $post): 
           $availability = ($post["availability"] == 1) ? "Piejams" : "Nav piejams"; ?>
-        <li><?= $post["title"] ?> / <?= $post["author"] ?> / <?= $post["publication_year"] ?> / <?= $availability ?></br>
+        <li><?= $post["title"] ?> / <?= $post["author"] ?> / <?= $post["publication_year"] ?></br>
         </li>
     <?php endforeach; ?>
 </ul>

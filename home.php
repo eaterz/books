@@ -5,24 +5,21 @@ session_start();
 if(isset($_SESSION['id']) && isset($_SESSION['username'])) {
     ?>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+    <?php require "components/head.php"?>
             <?php if($_SESSION['username'] == "Admin"){ ?>
-                <a href="/admin">edit books</a>
+                <nav class="nav_bar">
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a href="/admin">edit books</a></li>
+                    </ul>
+                </nav>
+                
             <?php }else{ ?>
                 <?php require "components/navbar.users.php";?>
             <?php } ?>
 
         <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
         
-        <a href="/logout">Logout</a>
+       <a class="logout" href="/logout">Logout</a>
     </body>
     </html>
 

@@ -1,6 +1,6 @@
 <?php
 
-require "function.php";
+
 $config = require "config.php";
 require "database.php";
 

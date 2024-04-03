@@ -1,0 +1,216 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust if needed */
+}
+
+/* Apply basic styling to the table */
+table {
+  border-collapse: collapse;
+  width: 25vw; /* Adjust the width as needed */
+}
+
+/* Apply styling to table headers */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Apply styling to table cells */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Apply alternate background color to even rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.nav_bar {
+  background-color: #333;
+}
+
+.nav_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav_li {
+  float: left;
+}
+
+.nav_li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav_li a:hover {
+  background-color: #111;
+}
+
+/* Apply button styles */
+.logout {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #ffffff; /* Border color */
+  color: #000000; /* Text color */
+  background-color: #fff; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.logout:hover {
+  background-color: #000000; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Center the login form horizontally and vertically */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+/* Style the login form */
+.login-form {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form elements */
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 18vw;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fefeff;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid black;
+}
+
+.login-form button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+button {
+  width: 10vw;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fefeff;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid black;
+}
+button:hover {
+  background-color: #000000;
+  color: white;
+}
+input {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.blue {
+  width: 5vw;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid black;
+}
+.blue:hover {
+  background-color: #002fff;
+  color: white;
+}
+
+.red {
+  width: 5vw;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid black;
+}
+.red:hover {
+  background-color: #ff0400;
+  color: white;
+}
+
+.admin_butt {
+  display: flex;
+  gap: 10px;
+}
+.create_butt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 42%;
+}
+.add {
+  width: 15vw;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid black;
+}
+
+.add:hover {
+  background-color: #000000;
+  color: white;
+}

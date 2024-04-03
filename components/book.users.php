@@ -1,6 +1,5 @@
 <?php
 $page_title = "Users book";
-require "function.php";
 $config = require "config.php";
 require "database.php";
 

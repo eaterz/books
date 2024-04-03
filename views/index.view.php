@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pieteikšanās</title>
-</head>
-<body>
+<?php require "components/head.php"; ?>
     <?php require "components/navbar.php"; ?>
-    <form action="/login" method="post">
+
+
+    <div class="login-container">
+    <form class="login-form" action="/login" method="post">
         <h2>LOGIN</h2>
         <?php if(isset($_GET['log'])) { ?>
             <p class="log"><?php echo $_GET['log']; ?></p>
@@ -17,8 +15,10 @@
 
         <button type="submit">Pieteikties</button>
     </form>
+    </div>
 
-    <form action="/register" method="post">
+    <div class="login-container">
+    <form class="login-form" action="/register" method="post">
         <h2>Registration</h2>
         <?php if(isset($_GET['reg'])) { ?>
             <p class="reg"><?php echo $_GET['reg']; ?></p>
@@ -31,7 +31,7 @@
         <input type="password" name="confirm_password" placeholder="Confirm Password">
         <button type="submit">Register</button>
     </form>
-
+    </div>
 </body>
 </html>
 
